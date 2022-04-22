@@ -68,9 +68,10 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
   const secondLetterFirstName = document
     .getElementById("deuxieme-lettre")
     .value.toUpperCase();
-  const thirdLetterFirstName = document
-    .getElementById("troisieme-lettre")
-    .value.toUpperCase();
+  // const thirdLetterFirstName = document
+  //   .getElementById("troisieme-lettre")
+  //   .value.toUpperCase();
+  const dateNaissance = document.getElementById("date-naissance").value
   //Generate name ID
   const alphabet = [
     "A",
@@ -104,9 +105,10 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
     firstLetterFirstName.length > 1 ||
     firstLetterFirstName.length == 0 ||
     secondLetterFirstName.length > 1 ||
-    secondLetterFirstName.length == 0 ||
-    thirdLetterFirstName.length > 1 ||
-    thirdLetterFirstName.length == 0
+    secondLetterFirstName.length == 0 
+    // ||
+    // thirdLetterFirstName.length > 1 ||
+    // thirdLetterFirstName.length == 0
   ) {
     alert("Rentrez une lettre");
   } else {
@@ -122,16 +124,16 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
       secondNameId += Math.floor(Math.random() * 10).toString();
     }
     //Generate ThirdName ID
-    let thirdNameId = alphabet.indexOf(thirdLetterFirstName);
-    if (thirdNameId != "0") {
-      thirdNameId = sumNumberToString(thirdNameId);
-    } else {
-      thirdNameId = alphabet.indexOf(thirdLetterFirstName).toString();
-    }
+    // let thirdNameId = alphabet.indexOf(thirdLetterFirstName);
+    // if (thirdNameId != "0") {
+    //   thirdNameId = sumNumberToString(thirdNameId);
+    // } else {
+    //   thirdNameId = alphabet.indexOf(thirdLetterFirstName).toString();
+    // }
 
-    console.log(firstNameId, secondNameId, thirdNameId);
+    console.log(firstNameId, secondNameId, dateNaissance);
     const idComplet =
-      paysId + idMonth + firstNameId + idYear + secondNameId + thirdNameId;
+      paysId + idMonth + firstNameId + idYear + secondNameId + dateNaissance;
 
     console.log(idComplet);
     document.getElementById(

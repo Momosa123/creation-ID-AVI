@@ -12,6 +12,7 @@
     <form id="avi-infos">
       <select id="country" name="country-choice">
         <option value="Sénégal">Sénégal</option>
+        <option value="Guinée">Guinée</option>
         <option value="Congo-Brazzaville">Congo-Brazzaville</option>
         <option value="Cameroun">Cameroun</option>
         <option value="CIV">CIV</option>
@@ -32,14 +33,20 @@
         <input id="deuxieme-lettre" name="deuxieme-lettre" type="text" />
       </div>
       <div class="letter-input">
+        <label class="letter-label" for="mois-naissance"
+          >Entrer les deux  chiffres de son mois de naissance</label
+        >
+        <input id="mois-naissance" name="mois-naissance" type="text" />
+      </div>
+      <div class="letter-input">
         <!-- <label class="letter-label" for="troisieme-lettre"
           >Entrer la deuxième lettre du nom</label
         >
         <input id="troisieme-lettre" name="troisieme-lettre" type="text" /> -->
-        <label class="letter-label" for="date-naissance"
-          >Entrer les deux derniers chiffres de sa date de naissance</label
+        <label class="letter-label" for="annee-naissance"
+          >Entrer les deux derniers chiffres de son année de naissance</label
         >
-        <input id="date-naissance" name="date-naissance" type="text" />
+        <input id="annee-naissance" name="annee-naissance" type="text" />
       </div>
       <button>Générer un numéro d'AVI</button>
     </form>

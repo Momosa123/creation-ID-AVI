@@ -35,28 +35,31 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
   console.log(pays);
   switch (pays) {
     case "Sénégal":
-      paysId = "208";
+      paysId = "28";
+      break;
+      case "Guinée":
+      paysId = "26";
       break;
     case "Bénin":
-      paysId = "207";
+      paysId = "27";
       break;
     case "Mali":
-      paysId = "210";
+      paysId = "21";
       break;
     case "Congo-Brazzaville":
-      paysId = "300";
+      paysId = "30";
       break;
     case "Cameroun":
-      paysId = "310";
+      paysId = "31";
       break;
     case "CIV":
-      paysId = "307";
+      paysId = "37";
       break;
     case "Togo":
-      paysId = "309";
+      paysId = "39";
       break;
     default:
-      console.log(`Sorry, wrong country.`);
+      console.log(`Désolé le pays est inconnu.`);
   }
   console.log(paysId);
 
@@ -71,7 +74,8 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
   // const thirdLetterFirstName = document
   //   .getElementById("troisieme-lettre")
   //   .value.toUpperCase();
-  const dateNaissance = document.getElementById("date-naissance").value
+  const anneeNaissance = document.getElementById("annee-naissance").value
+  const moisNaissance = document.getElementById("mois-naissance").value
   //Generate name ID
   const alphabet = [
     "A",
@@ -131,9 +135,9 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
     //   thirdNameId = alphabet.indexOf(thirdLetterFirstName).toString();
     // }
 
-    console.log(firstNameId, secondNameId, dateNaissance);
+    console.log(firstNameId, secondNameId, anneeNaissance);
     const idComplet =
-      paysId + idMonth + firstNameId + idYear + secondNameId + dateNaissance;
+      paysId  + firstNameId + moisNaissance + idYear  + secondNameId  + anneeNaissance;
 
     console.log(idComplet);
     document.getElementById(

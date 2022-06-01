@@ -49,6 +49,9 @@ document.getElementById("avi-infos").addEventListener("submit", (e) => {
     case "Congo-Brazzaville":
       paysId = "30";
       break;
+    case "RDC":
+      paysId = "32";
+      break;
     case "Cameroun":
       paysId = "31";
       break;
